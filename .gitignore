@@ -1,0 +1,34 @@
+# Ignore OS files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Ignore logs and databases #
+*.log
+*.sql
+*.sqlite
+error_log
+access_log
+
+# Ignored inside the wp-content folder#
+/*
+!.gitignore
+plugins/*
+!readme.md
+themes/*
+!uploads/
+
+# Ignored Inside of the Plugins Folder#
+!plugins/inhabitent-functionality/
+!plugins/business-hours-widget/
+
+# Ignored Inside of Themes Folder #
+!themes/Inhabitent-theme	
+
+# Ignore Node_Modules #
+themes/Inhabitent-theme/node_modules/
