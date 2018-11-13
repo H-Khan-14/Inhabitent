@@ -18,17 +18,16 @@ access_log
 # Ignored inside the wp-content folder#
 /*
 !.gitignore
-plugins/*
-!readme.md
-themes/*
+!plugins/
+!themes/
 !uploads/
-
-# Ignored Inside of the Plugins Folder#
-!plugins/inhabitent-functionality/
-!plugins/business-hours-widget/
-
-# Ignored Inside of Themes Folder #
-!themes/Inhabitent-theme	
-
-# Ignore Node_Modules #
-themes/Inhabitent-theme/node_modules/
+!README.md
+# Ignore everything in "plugins" except certain plugins. #
+plugins/*
+!/plugins/inhabitent-functionality/
+!/plugins/business-hours-widget/
+# Ignore everything in "themes" except the active theme. #
+/themes/*
+!/themes/Inhabitent-theme/
+# Ignore packages #
+/themes/Inhabitent-theme/node_modules/
