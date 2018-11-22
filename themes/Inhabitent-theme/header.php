@@ -12,54 +12,53 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<?php wp_head(); ?>
 	</head>
-	<?php include ( 'princeHaseeb.php' ); ?>
 
 	<body <?php body_class(); ?>>
-		<div id="page" class="hfeed site">
-			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
-
-			<?php $zeros = array( 'trump', 'naruto', 'thanos', 'scar', 'miraz dad' );
-      foreach ( $zeros as $zeros ) {
-      echo "<p>$zeros</p>";
-			}
-
-			$insult = say_fuckOff( 'Naruto' );
-
-			echo $insult;
-
-			$URL = "https://vignette.wikia.nocookie.net/dragonballfanon/images/7/70/Random.png/revision/latest?cb=20161221030547";
-
-
-
-			echo "<img src='$URL'/>";
-			
-
-			$Image_String = CopyImg( $URL );
-
-			echo $Image_String;
-
-			//Exercise 1:
-			//echo "<p>Fuck Off World</p>";
-
-
-
-			?>
 
 			<header id="masthead" class="site-header" role="banner">
+			<div class="header-container">
 				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<!-- insert tent image logo here -->
+					<a href="http://localhost:8888/Inhabitent/Wordpress/">
+            <img src="http://localhost:8888/Inhabitent/Wordpress/wp-content/themes/inhabitent-theme/assets/images/logos/inhabitent-logo-tent.svg">
+          </a>
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					<div class="header-search">
+						<i class="fa fa-search"></i>
+						<?php get_search_form(); ?>
+
+						</div>
+						</div>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
+			<script type="text/javascript" src="https://te"></script>
+			<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			console.log("we scripting");
+			jQuery(function($) {
+				var $nav = $('header');
+				var $win = $(window);
+				var winH = $win.height(); // Get the window height.
 
-$zeros = array('trump', 'naruto', 'goku', 'spiders', 'thanos', 'scar', 'miraz dad')
+				$win.on("scroll", function () {
+						if ($(this).scrollTop() > winH ) {
+								$nav.addClass("scroll-header");
+						} else {
+								$nav.removeClass("scroll-header");
+						}
+				}).on("resize", function(){ // If the user resizes the window
+					winH = $(this).height(); // you'll need the new height value
+				});
+
+				});
+		</script>
+

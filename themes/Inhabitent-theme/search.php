@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+<?php echo "Confirmation that this is indeed the search page that I need to add the permalink button to.";?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -20,6 +21,8 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'search' ); ?>
+				<?php $searchlink = get_permalink($searchlink->ID); ?>
+				<a class = "search-read-button" href = "<?php echo $searchlink ?>">Read More</a>
 
 			<?php endwhile; ?>
 

@@ -1,0 +1,1 @@
+<?php echo "Is this page connected to the proper page? I certainly hope so. If not I am screwed."; ?>

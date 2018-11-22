@@ -22,12 +22,12 @@ function red_starter_body_classes( $classes ) {
 add_filter( 'body_class', 'red_starter_body_classes' );
 ?>
 <?php
-
+//Still need to do exercise 2 #2 from slide 34 of functions hooks and debugging
 function my_login_logo_one() { 
 	?> 
 	<style type="text/css"> 
 	body.login div#login h1 a {
-	background-image: url("../assets/images/logos/inhabitent-logo-tent.svg"); 
+	background-image: url(http://localhost:8888/Inhabitent/Wordpress/wp-content/themes/inhabitent-theme/assets/images/logos/inhabitent-logo-text-dark.svg);
 	padding-bottom: 30px; 
 			height:65px;
 		width:320px;
@@ -35,5 +35,11 @@ function my_login_logo_one() {
 		background-repeat: no-repeat;
 	} 
 	</style>
+	<?php 
+	add_filter( 'login_headerurl', 'custom_loginlogo_url' );
+	function custom_loginlogo_url($url) {
+		return 'http://localhost:8888/Inhabitent/Wordpress/';
+	}
+	?>
 	<?php 
 	} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
